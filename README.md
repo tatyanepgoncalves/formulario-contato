@@ -8,6 +8,8 @@
 - JS
 - Bootstrap Icons
 
+##
+
 ## 💻 Projeto 
 
 <img src='img/preview.png'>
