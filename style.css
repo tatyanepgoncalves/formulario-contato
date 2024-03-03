@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --azul: hsl(190, 100%, 34%);
+    --azul-eletrico: hsl(180, 95%, 71%);
+    --renda-velha: hsl(36, 100%, 95%);
+    --baunilha: hsl(49, 84%, 81%);
+    --rosa: hsl(324, 100%, 67%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--azul);
+}
+
+form{
+    background-color: #fff;
+    max-width: 1500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, .363);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    align-items: center;
+}
+
+.left{
+    width: 100%;
+}
+
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: block;
+}
+
+.right h3{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--azul);
+}
+
+.right .social-media{
+    text-align: center;
+    
+}
+
+.social-media button{
+    max-height: 50px;
+    height: 50px;
+    max-width: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--azul);
+    cursor: pointer;
+    transition: .5s;
+    margin: 35px 5px;
+}
+
+.social-media button a i{
+    font-size: 20px;
+    color: #fff;
+}
+
+.social-media button:hover{
+    background-color: var(--azul-eletrico);
+}
+
+.social-media button:hover a i{
+    color: #000;
+}
+
+.right input[type=text],
+.right input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.right input[type=submit]{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--azul);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 100px;
+}
+
+.right input[type=submit]:hover{
+    color: #000;
+    background-color: var(--azul-eletrico);
+}
+
+@media (max-width: 800px){
+    body{
+        margin: 80px 0;
+    }
+
+    form{
+        height: 900px;
+        max-width: 700px;
+        width: 400px;
+    }
+
+    .container{
+        display: flex;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 1fr);
+        flex-direction: column;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .right h3{
+        font-size: 35px;
+    }
+
+    .right input[type=submit]{
+        margin-top: 50px;
+    }
+
+}
